@@ -1,0 +1,138 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+// defining multiple OneToMany relationships with comments
+
+// Set pagination options
+
+
+
+// Use Data Transfer Objects (DTO)
+// dto mapstruct
+
+
+
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
+enum PropertyStatus { FIN, CON, UA} 
+enum PropertyCondition{ NEW, OLD} 
+enum MediaType { AUDIO, VIDEO, IMAGE, GIF} 
+enum SalesType { SALES, RENTAL, BOTH} 
+enum SalesStatus { SOLD, AVAILABLE, EXPIRED, REMOVED } 
+
+
+entity Attribute{
+attributeName String, 
+description String
+}
+entity Category {
+categorName String, 
+description String 
+}
+entity Property {
+area Double, 
+description String, 
+
+ }
+entity Language { 
+languageName String, 
+code String 
+}
+entity Country {
+countryName String 
+}
+entity City { 
+cityyName String 
+}
+entity Address {
+addressName String 
+ }
+entity AttributeValue {
+value String, 
+description String 
+ }
+entity Media {
+type MediaType, 
+location String, 
+fileName String, 
+extention String, 
+isDefault Boolean, 
+description String 
+ }
+entity Customer { 
+customerName String, 
+dob Instant 
+}
+entity Business {
+businessName String, 
+year Instant 
+ }
+entity Account{ 
+username String, 
+password String, 
+dateCreated Instant 
+}
+entity Privilege { }
+entity SalesProperty {
+datePosted Instant, 
+expiryDate Instant, 
+type SalesType, 
+status SalesStatus, 
+defaultPrice Double
+ }
+entity PropertyPricing {
+defaultPrice Double, 
+currentPrice Double, 
+description String 
+ }
+entity PropertyGroup { 
+groupName String, 
+description String
+}
+relationship  OneToMany{ 
+Category{attribute} to Attribute{category} 
+} 
+relationship OneToMany {
+Attribute{attributeValue} to AttributeValue{attribute}
+ }
+relationship  OneToMany{
+Category{property} to Property{category}
+ } 
+relationship OneToMany { 
+Category{parent} to Category{children}
+}
+relationship  OneToMany{ 
+Property{attributeValue} to AttributeValue{property}
+} 
+relationship  OneToOne{ 
+Property{salesProperty} to SalesProperty{property}
+}
+relationship OneToMany { 
+Customer{account } to Account{customer}
+} 
+relationship OneToMany { 
+Account{salesProperty} to SalesProperty{account}
+}

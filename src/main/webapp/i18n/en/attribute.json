@@ -1,0 +1,26 @@
+{
+  "blmApp": {
+    "attribute": {
+      "home": {
+        "title": "Attributes",
+        "createLabel": "Create a new Attribute",
+        "createOrEditLabel": "Create or edit a Attribute",
+        "search": "Search for Attribute",
+        "notFound": "No Attributes found"
+      },
+      "created": "A new Attribute is created with identifier {{ param }}",
+      "updated": "A Attribute is updated with identifier {{ param }}",
+      "deleted": "A Attribute is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Attribute {{ id }}?"
+      },
+      "detail": {
+        "title": "Attribute"
+      },
+      "attributeName": "Attribute Name",
+      "description": "Description",
+      "attributeValue": "Attribute Value",
+      "category": "Category"
+    }
+  }
+}

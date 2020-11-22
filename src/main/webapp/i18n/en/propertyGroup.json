@@ -1,0 +1,24 @@
+{
+  "blmApp": {
+    "propertyGroup": {
+      "home": {
+        "title": "Property Groups",
+        "createLabel": "Create a new Property Group",
+        "createOrEditLabel": "Create or edit a Property Group",
+        "search": "Search for Property Group",
+        "notFound": "No Property Groups found"
+      },
+      "created": "A new Property Group is created with identifier {{ param }}",
+      "updated": "A Property Group is updated with identifier {{ param }}",
+      "deleted": "A Property Group is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Property Group {{ id }}?"
+      },
+      "detail": {
+        "title": "Property Group"
+      },
+      "groupName": "Group Name",
+      "description": "Description"
+    }
+  }
+}

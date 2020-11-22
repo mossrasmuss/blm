@@ -1,0 +1,25 @@
+{
+  "name": "Business",
+  "fields": [
+    {
+      "fieldName": "businessName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201122171828",
+  "entityTableName": "business",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

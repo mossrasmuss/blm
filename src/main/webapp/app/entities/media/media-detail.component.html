@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="media">
+            <h2><span jhiTranslate="blmApp.media.detail.title">Media</span> {{ media.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="blmApp.media.type">Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'blmApp.MediaType.' + media.type }}">{{ media.type }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.media.location">Location</span></dt>
+                <dd>
+                    <span>{{ media.location }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.media.fileName">File Name</span></dt>
+                <dd>
+                    <span>{{ media.fileName }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.media.extention">Extention</span></dt>
+                <dd>
+                    <span>{{ media.extention }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.media.isDefault">Is Default</span></dt>
+                <dd>
+                    <span>{{ media.isDefault }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.media.description">Description</span></dt>
+                <dd>
+                    <span>{{ media.description }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/media', media.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

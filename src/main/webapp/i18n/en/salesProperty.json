@@ -1,0 +1,29 @@
+{
+  "blmApp": {
+    "salesProperty": {
+      "home": {
+        "title": "Sales Properties",
+        "createLabel": "Create a new Sales Property",
+        "createOrEditLabel": "Create or edit a Sales Property",
+        "search": "Search for Sales Property",
+        "notFound": "No Sales Properties found"
+      },
+      "created": "A new Sales Property is created with identifier {{ param }}",
+      "updated": "A Sales Property is updated with identifier {{ param }}",
+      "deleted": "A Sales Property is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sales Property {{ id }}?"
+      },
+      "detail": {
+        "title": "Sales Property"
+      },
+      "datePosted": "Date Posted",
+      "expiryDate": "Expiry Date",
+      "type": "Type",
+      "status": "Status",
+      "defaultPrice": "Default Price",
+      "property": "Property",
+      "account": "Account"
+    }
+  }
+}

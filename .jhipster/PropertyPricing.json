@@ -1,0 +1,29 @@
+{
+  "name": "PropertyPricing",
+  "fields": [
+    {
+      "fieldName": "defaultPrice",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "currentPrice",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201122172228",
+  "entityTableName": "property_pricing",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

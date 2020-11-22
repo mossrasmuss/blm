@@ -1,0 +1,43 @@
+{
+  "name": "UserAccount",
+  "fields": [
+    {
+      "fieldName": "usrname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pWd",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateCreated",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "salesProperty",
+      "otherEntityRelationshipName": "account",
+      "relationshipName": "salesProperty"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "account",
+      "relationshipName": "customer",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201122171928",
+  "entityTableName": "user_account",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

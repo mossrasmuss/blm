@@ -1,0 +1,66 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-media-heading" jhiTranslate="blmApp.media.home.createOrEditLabel">Create or edit a Media</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="blmApp.media.type" for="field_type">Type</label>
+                    <select class="form-control" name="type" formControlName="type" id="field_type">
+                        <option value="AUDIO">{{ 'blmApp.MediaType.AUDIO' | translate }}</option>
+                        <option value="VIDEO">{{ 'blmApp.MediaType.VIDEO' | translate }}</option>
+                        <option value="IMAGE">{{ 'blmApp.MediaType.IMAGE' | translate }}</option>
+                        <option value="GIF">{{ 'blmApp.MediaType.GIF' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="blmApp.media.location" for="field_location">Location</label>
+                    <input type="text" class="form-control" name="location" id="field_location"
+                           formControlName="location"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="blmApp.media.fileName" for="field_fileName">File Name</label>
+                    <input type="text" class="form-control" name="fileName" id="field_fileName"
+                           formControlName="fileName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="blmApp.media.extention" for="field_extention">Extention</label>
+                    <input type="text" class="form-control" name="extention" id="field_extention"
+                           formControlName="extention"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="blmApp.media.isDefault" for="field_isDefault">Is Default</label>
+                    <input type="checkbox" class="form-control" name="isDefault" id="field_isDefault"
+                           formControlName="isDefault"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="blmApp.media.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                           formControlName="description"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

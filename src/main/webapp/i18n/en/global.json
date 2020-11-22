@@ -7,6 +7,22 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "attribute": "Attribute",
+        "category": "Category",
+        "property": "Property",
+        "language": "Language",
+        "country": "Country",
+        "city": "City",
+        "address": "Address",
+        "attributeValue": "Attribute Value",
+        "media": "Media",
+        "customer": "Customer",
+        "business": "Business",
+        "userAccount": "User Account",
+        "privilege": "Privilege",
+        "salesProperty": "Sales Property",
+        "propertyPricing": "Property Pricing",
+        "propertyGroup": "Property Group",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

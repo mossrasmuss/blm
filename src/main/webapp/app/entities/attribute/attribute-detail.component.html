@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="attribute">
+            <h2><span jhiTranslate="blmApp.attribute.detail.title">Attribute</span> {{ attribute.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="blmApp.attribute.attributeName">Attribute Name</span></dt>
+                <dd>
+                    <span>{{ attribute.attributeName }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.attribute.description">Description</span></dt>
+                <dd>
+                    <span>{{ attribute.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.attribute.category">Category</span></dt>
+                <dd>
+                    <div *ngIf="attribute.category">
+                        <a [routerLink]="['/category', attribute.category?.id, 'view']">{{ attribute.category?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/attribute', attribute.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

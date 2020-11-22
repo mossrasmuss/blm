@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="salesProperty">
+            <h2><span jhiTranslate="blmApp.salesProperty.detail.title">Sales Property</span> {{ salesProperty.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="blmApp.salesProperty.datePosted">Date Posted</span></dt>
+                <dd>
+                    <span>{{ salesProperty.datePosted }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.salesProperty.expiryDate">Expiry Date</span></dt>
+                <dd>
+                    <span>{{ salesProperty.expiryDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.salesProperty.type">Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'blmApp.SalesType.' + salesProperty.type }}">{{ salesProperty.type }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.salesProperty.status">Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'blmApp.SalesStatus.' + salesProperty.status }}">{{ salesProperty.status }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.salesProperty.defaultPrice">Default Price</span></dt>
+                <dd>
+                    <span>{{ salesProperty.defaultPrice }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.salesProperty.account">Account</span></dt>
+                <dd>
+                    <div *ngIf="salesProperty.account">
+                        <a [routerLink]="['/user-account', salesProperty.account?.id, 'view']">{{ salesProperty.account?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sales-property', salesProperty.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

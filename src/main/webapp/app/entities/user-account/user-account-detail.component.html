@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="userAccount">
+            <h2><span jhiTranslate="blmApp.userAccount.detail.title">User Account</span> {{ userAccount.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="blmApp.userAccount.usrname">Usrname</span></dt>
+                <dd>
+                    <span>{{ userAccount.usrname }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.userAccount.pWd">P Wd</span></dt>
+                <dd>
+                    <span>{{ userAccount.pWd }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.userAccount.dateCreated">Date Created</span></dt>
+                <dd>
+                    <span>{{ userAccount.dateCreated }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.userAccount.customer">Customer</span></dt>
+                <dd>
+                    <div *ngIf="userAccount.customer">
+                        <a [routerLink]="['/customer', userAccount.customer?.id, 'view']">{{ userAccount.customer?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/user-account', userAccount.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

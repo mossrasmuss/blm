@@ -1,0 +1,54 @@
+{
+  "name": "SalesProperty",
+  "fields": [
+    {
+      "fieldName": "datePosted",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "expiryDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "SalesType",
+      "fieldValues": "SALES,RENTAL,BOTH"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "SalesStatus",
+      "fieldValues": "SOLD,AVAILABLE,EXPIRED,REMOVED"
+    },
+    {
+      "fieldName": "defaultPrice",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "property",
+      "otherEntityRelationshipName": "salesProperty",
+      "relationshipName": "property",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "userAccount",
+      "otherEntityRelationshipName": "salesProperty",
+      "relationshipName": "account",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201122172128",
+  "entityTableName": "sales_property",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

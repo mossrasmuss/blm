@@ -1,0 +1,10 @@
+{
+  "blmApp": {
+    "SalesType": {
+      "null": "",
+      "SALES": "SALES",
+      "RENTAL": "RENTAL",
+      "BOTH": "BOTH"
+    }
+  }
+}

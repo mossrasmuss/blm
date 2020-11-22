@@ -1,0 +1,11 @@
+{
+  "blmApp": {
+    "MediaType": {
+      "null": "",
+      "AUDIO": "AUDIO",
+      "VIDEO": "VIDEO",
+      "IMAGE": "IMAGE",
+      "GIF": "GIF"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="property">
+            <h2><span jhiTranslate="blmApp.property.detail.title">Property</span> {{ property.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="blmApp.property.area">Area</span></dt>
+                <dd>
+                    <span>{{ property.area }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.property.description">Description</span></dt>
+                <dd>
+                    <span>{{ property.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="blmApp.property.salesProperty">Sales Property</span></dt>
+                <dd>
+                    <div *ngIf="property.salesProperty">
+                        <a [routerLink]="['/sales-property', property.salesProperty?.id, 'view']">{{ property.salesProperty?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="blmApp.property.category">Category</span></dt>
+                <dd>
+                    <div *ngIf="property.category">
+                        <a [routerLink]="['/category', property.category?.id, 'view']">{{ property.category?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/property', property.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "name": "Privilege",
+  "fields": [],
+  "relationships": [],
+  "changelogDate": "20201122172028",
+  "entityTableName": "privilege",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

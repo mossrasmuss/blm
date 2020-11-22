@@ -1,0 +1,11 @@
+{
+  "blmApp": {
+    "SalesStatus": {
+      "null": "",
+      "SOLD": "SOLD",
+      "AVAILABLE": "AVAILABLE",
+      "EXPIRED": "EXPIRED",
+      "REMOVED": "REMOVED"
+    }
+  }
+}

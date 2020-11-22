@@ -50,6 +50,29 @@ public class CacheConfiguration {
             createCache(cm, com.illo.blm.domain.User.class.getName());
             createCache(cm, com.illo.blm.domain.Authority.class.getName());
             createCache(cm, com.illo.blm.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.illo.blm.domain.Attribute.class.getName());
+            createCache(cm, com.illo.blm.domain.Attribute.class.getName() + ".attributeValues");
+            createCache(cm, com.illo.blm.domain.Category.class.getName());
+            createCache(cm, com.illo.blm.domain.Category.class.getName() + ".attributes");
+            createCache(cm, com.illo.blm.domain.Category.class.getName() + ".properties");
+            createCache(cm, com.illo.blm.domain.Category.class.getName() + ".parents");
+            createCache(cm, com.illo.blm.domain.Property.class.getName());
+            createCache(cm, com.illo.blm.domain.Property.class.getName() + ".attributeValues");
+            createCache(cm, com.illo.blm.domain.Language.class.getName());
+            createCache(cm, com.illo.blm.domain.Country.class.getName());
+            createCache(cm, com.illo.blm.domain.City.class.getName());
+            createCache(cm, com.illo.blm.domain.Address.class.getName());
+            createCache(cm, com.illo.blm.domain.AttributeValue.class.getName());
+            createCache(cm, com.illo.blm.domain.Media.class.getName());
+            createCache(cm, com.illo.blm.domain.Customer.class.getName());
+            createCache(cm, com.illo.blm.domain.Customer.class.getName() + ".accounts");
+            createCache(cm, com.illo.blm.domain.Business.class.getName());
+            createCache(cm, com.illo.blm.domain.UserAccount.class.getName());
+            createCache(cm, com.illo.blm.domain.UserAccount.class.getName() + ".salesProperties");
+            createCache(cm, com.illo.blm.domain.Privilege.class.getName());
+            createCache(cm, com.illo.blm.domain.SalesProperty.class.getName());
+            createCache(cm, com.illo.blm.domain.PropertyPricing.class.getName());
+            createCache(cm, com.illo.blm.domain.PropertyGroup.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,25 @@
+{
+  "blmApp": {
+    "propertyPricing": {
+      "home": {
+        "title": "Property Pricings",
+        "createLabel": "Create a new Property Pricing",
+        "createOrEditLabel": "Create or edit a Property Pricing",
+        "search": "Search for Property Pricing",
+        "notFound": "No Property Pricings found"
+      },
+      "created": "A new Property Pricing is created with identifier {{ param }}",
+      "updated": "A Property Pricing is updated with identifier {{ param }}",
+      "deleted": "A Property Pricing is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Property Pricing {{ id }}?"
+      },
+      "detail": {
+        "title": "Property Pricing"
+      },
+      "defaultPrice": "Default Price",
+      "currentPrice": "Current Price",
+      "description": "Description"
+    }
+  }
+}
